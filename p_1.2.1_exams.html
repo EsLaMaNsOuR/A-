@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> A+ | Professor </title>
+    <!--course Title-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/P_1.2.1_exams/css/rtl.css">
+    <link rel="stylesheet" href="css/P_1.2.1_exams/css/style.css">
+    <script src="js/jquery.css"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        function delID(exam_ID, course_ID) {
+            document.getElementById("DEL_popup_hidden_exam_ID").value = exam_ID;
+            document.getElementById("DEL_popup_hidden_course_ID").value = course_ID;
+        }
+    </script>
+</head>
+
+<body onload="document.body.style.opacity='1';">
+    <nav class="navbar navbar-fixed-top navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                    aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand">
+                    <img class="navbar-brand" src="img/logo-col-small.png">
+                </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="P_1_home.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="P_1.1_setExam.html">New exam</a>
+                    </li>
+                    <li class="active">
+                        <a href="P_1.2_course.html">Courses</a>
+                    </li>
+                    <li>
+                        <a href="P_1.3_courseDegrees.html">Enrolled students</a>
+                    </li>
+                    <li class="dropdown" style="margin-right: 10px;">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span id="userName">
+                                Professor
+                            </span>
+                            <span id="position">
+                                Ahmed Kamel
+                            </span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a onclick="getElementById('popup').style.visibility='visible';">
+                                    Logout
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div align="center">
+        <!--<h4><a href="P_1.2_cources.html" class="title btn">Course name ></a> </h4>-->
+        <div class="container">
+            <a href="P_1.2_course.html">
+                <label class="upperTitle">
+                    File Orgnization, Summer 2017/2018, 365 students
+                </label>
+            </a>
+        </div>
+        <table class="table">
+            <tr class="click-row">
+                <td width="20%">
+                    <br>
+                    <br>
+                    <button type="button" name="sub" class=" b btn_p btn" id="op_1" onclick="func('op_1','oo_1');">
+                        <input class="op" type="radio" name="options" style="position: absolute;clip: rect(0, 0, 0, 0);" id="option_'.$w.'" autocomplete="">
+                        <span id="oo_1">Enable</span>
+                    </button>
+                </td>
+                <td onclick="window.location.href='P_1.2.2_exam.html'">
+                    <br>
+                    <label class="title">
+                        Midterm
+                    </label>
+                    <br>
+                    <label class="info">5 questions, 10 minutes
+                        <br>10 points </label>
+                    <br>
+                </td>
+                <td>
+                    <a title="Edit" href="P_1.2.3_editExam.html">
+                        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                    </a>
+                    <br>
+                    <br>
+                    <a title="Degrees" href="P_1.2.4_examDegree.html">
+                        <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+                    </a>
+                    <br>
+                    <br>
+                    <a title="Remove" data-toggle="modal" onclick="delID(''.$eid[$i][0].'',''.$cid[0].'');" data-target="#deletePopup">
+                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                    </a>
+                </td>
+            </tr>
+            <tr class="click-row">
+                <td width="20%">
+                    <br>
+                    <br>
+                    <button type="button" name="sub" class=" b btn_p btn" id="op_2" onclick="func('op_2','oo_2');">
+                        <input class="op" type="radio" name="options" style="position: absolute;clip: rect(0, 0, 0, 0);" id="option_'.$w.'" autocomplete="">
+                        <span id="oo_2">Enable</span>
+                    </button>
+                </td>
+                <td onclick="window.location.href='P_1.2.2_exam.html'">
+                    <br>
+
+                    <label class="title">
+                        Midterm
+                    </label>
+                    <br>
+                    <label class="info">5 questions, 10 minutes
+                        <br>10 points </label>
+                    <br>
+                </td>
+                <td>
+                    <a title="Edit" href="P_1.2.3_editExam.html">
+                        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                    </a>
+                    <br>
+                    <br>
+                    <a title="Degrees" href="P_1.2.4_examDegree.html">
+                        <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+                    </a>
+                    <br>
+                    <br>
+                    <a title="Remove" data-toggle="modal" onclick="delID(''.$eid[$i][0].'',''.$cid[0].'');" data-target="#deletePopup">
+                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                    </a>
+                </td>
+            </tr>
+            <tr class="click-row">
+                <td width="20%">
+                    <br>
+                    <br>
+
+                    <button type="button" name="sub" class="active b btn_p btn" id="op_3" onclick="func('op_3','oo_3');">
+                        <input class="op" type="radio" name="options" style="position: absolute;clip: rect(0, 0, 0, 0);" id="option_'.$w.'" autocomplete=""
+                            checked="checked">
+                        <span id="oo_3">Disable</span>
+                    </button>
+                </td>
+                <td onclick="window.location.href='P_1.2.2_exam.html'">
+                    <br>
+                    <label class="title">
+                        Midterm
+                    </label>
+                    <br>
+                    <label class="info">5 questions, 10 minutes
+                        <br>10 points </label>
+                    <br>
+                </td>
+                <td>
+                    <a title="Edit" href="P_1.2.3_editExam.html">
+                        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                    </a>
+                    <br>
+                    <br>
+                    <a title="Degrees" href="P_1.2.4_examDegree.html">
+                        <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+                    </a>
+                    <br>
+                    <br>
+                    <a title="Remove" data-toggle="modal" onclick="delID(''.$eid[$i][0].'',''.$cid[0].'');" data-target="#deletePopup">
+                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                    </a>
+                </td>
+            </tr>
+            <br>
+            <br>
+        </table>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <nav class=" nav navbar-bottom"></nav>
+
+
+    <!--poopup-->
+    <div id="popup" uib-modal-window="modal-window" class=" popup modal fade ng-scope ng-isolate-scope in" role="dialog" size="sm"
+        index="0" animate="animate" ng-style="{'z-index': 1050 + $$topModalIndex*10, display: 'block'}" tabindex="-1" uib-modal-animation-class="fade"
+        modal-in-class="in" modal-animation="true" style="z-index: 1050; visibility:hidden;display: block;" onchange="document.body.style.opacity='1'"
+        ;>
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content" uib-modal-transclude="">
+                <div class="panel-heading">
+                    <div class="media">
+                        <div class="media-body">
+                            <h4 class="media-heading">Logout</h4>
+                            <h5 class="media-heading-down ">Are you sure ? </h5>
+                        </div>
+                        <div class="media-right">
+                            <span class=" glyphicon glyphicon-log-out" aria-hidden="true"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class=" modal-footer">
+                    <form action="index.html">
+                        <input type="button" onclick="getElementById('popup').style.visibility='hidden';" class=" btn btn-secondary" value="cancel">
+                        <input type="submit" class=" btn btn-success ">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--delete popup-->
+    <div class="modal fade" id="deletePopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <form method="POST">
+                    <div class="modal-body">
+                        Are You sure you want to remove this exam ?
+                    </div>
+                    <input id="DEL_popup_hidden_exam_ID" name="DEL_popup_hidden_exam_ID" type="hidden" value="">
+                    <input id="DEL_popup_hidden_course_ID" name="DEL_popup_hidden_course_ID" type="hidden" value="">
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-success" name="submit3">Remove</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        function func(temp, xx) {
+            var tt = '#' + temp;
+            var yy = '#' + xx;
+            if ($(tt).hasClass("active") === true) {
+                $(tt).removeClass("active");
+                $(tt).removeAttr("checked");
+                $(yy).html("Enable");
+            }
+            else {
+                for (var i = 1; i < 4; i++) {
+                    var t = '#op_' + i;
+                    var y = '#oo_' + i;
+                    $(t).removeClass("active");
+                    $(t).removeAttr("checked");
+                    $(y).html("Enable");
+                }
+                $(tt).addClass("active");
+                $(tt).attr("checked");
+                $(yy).html("Disable");
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>

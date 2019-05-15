@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> A+ | Admin </title>
+    <!--course Title-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/A_1.4_admins/css/rtl.css">
+    <link rel="stylesheet" href="css/A_1.4_admins/css/style.css">
+    <script src="js/jquery.css"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+</head>
+
+<body onload="document.body.style.opacity='1';">
+    <nav class="navbar navbar-fixed-top navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                    aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand">
+                    <img class="navbar-brand" src="img/logo-col-small.png">
+                </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="A_1.1_terms.html">Semesters</a>
+                    </li>
+                    <li class="active">
+                        <a href="A_1.4_admins.html">Admins</a>
+                    </li>
+                    <li>
+                        <a href="A_1.5_Professors.html">Professors</a>
+                    </li>
+                    <li>
+                        <a href="A_1.6_courses.html">Courses</a>
+                    </li>
+                    <li class="dropdown" style="margin-right: 10px;">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span id="position">
+                                Admin:
+                            </span>
+                            <span id="userName">
+                                Ahmed Kamel
+                            </span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a onclick="getElementById('popup').style.visibility='visible';">
+                                    Logout
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div align="center">
+        <table class="table">
+            <tr class="quesRow" scope="row">
+                <th>
+                    <label class="profName"> Admin name </label>
+                </th>
+                <th>
+                    <label class="profName"> Username </label>
+                </th>
+                <th>
+                    <label class="profName"> Password </label>
+                </th>
+                <th>
+                    <label class="profName"> E-mail </label>
+                </th>
+                <th>
+                    <label class="profName"> Telephone </label>
+                </th>
+                <th></th>
+            </tr>
+            <tr>
+                <form method="POST">
+                    <!--add Admin return to same page-->
+                    <td>
+                        <input type="text" class="course form-control" name="aname" required>
+                    </td>
+                    <td>
+                        <input type="text" class="course form-control" name="uname" required>
+                    </td>
+                    <td>
+                        <input type="password" class="course form-control" name="pass" required>
+                    </td>
+                    <td>
+                        <input type="email" class="course form-control" name="mail" required>
+                    </td>
+                    <td>
+                        <input type="tel" class="course form-control" name="tel" required>
+                    </td>
+                    <td>
+                        <button type="submit" class="btn btn-success" name="submit">Add Admin</button>
+                    </td>
+                </form>
+            </tr>
+            <tr>
+                <td>
+                    <br>
+                    <span id='name_$i' class='crs_info'>Ahmed Kamel</span>
+                </td>
+                <td>
+                    <br>
+                    <span id='username_$i' class='crs_info'>A_ahmedkamel</span>
+                </td>
+                <td>
+                    <br>
+                    <span id='password_$i' class='crs_info'>123</span>
+                </td>
+                <td>
+                    <br>
+                    <span id='mail_$i' class='crs_info'>ahmedkamel22@gmail.com</span>
+                </td>
+                <td>
+                    <br>
+                    <span id='phone_$i' class='crs_info'>01002222222</span>
+                </td>
+                <td>
+                    <div class='row_options'>
+                        <a id='edit_$i' onclick='editID("AdminID_DB", "Ahmed Kamel", "A_ahmedkamel", "123", "ahmedkamel22@gmail.com", "01002222222", "rowNum");'
+                            data-toggle='modal' data-target='#editAdmin' title='Edit' style='cursor: pointer;'>
+                            <span class='glyphicon glyphicon-edit' aria-hidden='true' </span>
+                        </a>
+                        <br>
+                        <br>
+                        <a id='delete_$i' onclick='delID("AdminID_DB");' data-toggle='modal' data-target='#deletePopup' title='Remove' style='cursor: pointer;'>
+                            <span class='glyphicon glyphicon-remove' aria-hidden='true'></span>
+                        </a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <br>
+                    <span id='name_$i' class='crs_info'>Ahmed Kamel</span>
+                </td>
+                <td>
+                    <br>
+                    <span id='username_$i' class='crs_info'>A_ahmedkamel</span>
+                </td>
+                <td>
+                    <br>
+                    <span id='password_$i' class='crs_info'>123</span>
+                </td>
+                <td>
+                    <br>
+                    <span id='mail_$i' class='crs_info'>ahmedkamel22@gmail.com</span>
+                </td>
+                <td>
+                    <br>
+                    <span id='phone_$i' class='crs_info'>01002222222</span>
+                </td>
+                <td>
+                    <div class='row_options'>
+                        <a id='edit_$i' onclick='editID("AdminID_DB", "Ahmed Kamel", "A_ahmedkamel", "123", "ahmedkamel22@gmail.com", "01002222222", "rowNum");'
+                            data-toggle='modal' data-target='#editAdmin' title='Edit' style='cursor: pointer;'>
+                            <span class='glyphicon glyphicon-edit' aria-hidden='true' </span>
+                        </a>
+                        <br>
+                        <br>
+                        <a id='delete_$i' onclick='delID("AdminID_DB");' data-toggle='modal' data-target='#deletePopup' title='Remove' style='cursor: pointer;'>
+                            <span class='glyphicon glyphicon-remove' aria-hidden='true'></span>
+                        </a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <br>
+                    <span id='name_$i' class='crs_info'>Ahmed Kamel</span>
+                </td>
+                <td>
+                    <br>
+                    <span id='username_$i' class='crs_info'>A_ahmedkamel</span>
+                </td>
+                <td>
+                    <br>
+                    <span id='password_$i' class='crs_info'>123</span>
+                </td>
+                <td>
+                    <br>
+                    <span id='mail_$i' class='crs_info'>ahmedkamel22@gmail.com</span>
+                </td>
+                <td>
+                    <br>
+                    <span id='phone_$i' class='crs_info'>01002222222</span>
+                </td>
+                <td>
+                    <div class='row_options'>
+                        <a id='edit_$i' onclick='editID("AdminID_DB", "Ahmed Kamel", "A_ahmedkamel", "123", "ahmedkamel22@gmail.com", "01002222222", "rowNum");'
+                            data-toggle='modal' data-target='#editAdmin' title='Edit' style='cursor: pointer;'>
+                            <span class='glyphicon glyphicon-edit' aria-hidden='true' </span>
+                        </a>
+                        <br>
+                        <br>
+                        <a id='delete_$i' onclick='delID("AdminID_DB");' data-toggle='modal' data-target='#deletePopup' title='Remove' style='cursor: pointer;'>
+                            <span class='glyphicon glyphicon-remove' aria-hidden='true'></span>
+                        </a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <br>
+                    <span id='name_$i' class='crs_info'>Ahmed Kamel</span>
+                </td>
+                <td>
+                    <br>
+                    <span id='username_$i' class='crs_info'>A_ahmedkamel</span>
+                </td>
+                <td>
+                    <br>
+                    <span id='password_$i' class='crs_info'>123</span>
+                </td>
+                <td>
+                    <br>
+                    <span id='mail_$i' class='crs_info'>ahmedkamel22@gmail.com</span>
+                </td>
+                <td>
+                    <br>
+                    <span id='phone_$i' class='crs_info'>01002222222</span>
+                </td>
+                <td>
+                    <div class='row_options'>
+                        <a id='edit_$i' onclick='editID("AdminID_DB", "Ahmed Kamel", "A_ahmedkamel", "123", "ahmedkamel22@gmail.com", "01002222222", "rowNum");'
+                            data-toggle='modal' data-target='#editAdmin' title='Edit' style='cursor: pointer;'>
+                            <span class='glyphicon glyphicon-edit' aria-hidden='true' </span>
+                        </a>
+                        <br>
+                        <br>
+                        <a id='delete_$i' onclick='delID("AdminID_DB");' data-toggle='modal' data-target='#deletePopup' title='Remove' style='cursor: pointer;'>
+                            <span class='glyphicon glyphicon-remove' aria-hidden='true'></span>
+                        </a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <br>
+                    <span id='name_$i' class='crs_info'>Ahmed Kamel</span>
+                </td>
+                <td>
+                    <br>
+                    <span id='username_$i' class='crs_info'>A_ahmedkamel</span>
+                </td>
+                <td>
+                    <br>
+                    <span id='password_$i' class='crs_info'>123</span>
+                </td>
+                <td>
+                    <br>
+                    <span id='mail_$i' class='crs_info'>ahmedkamel22@gmail.com</span>
+                </td>
+                <td>
+                    <br>
+                    <span id='phone_$i' class='crs_info'>01002222222</span>
+                </td>
+                <td>
+                    <div class='row_options'>
+                        <a id='edit_$i' onclick='editID("AdminID_DB", "Ahmed Kamel", "A_ahmedkamel", "123", "ahmedkamel22@gmail.com", "01002222222", "rowNum");'
+                            data-toggle='modal' data-target='#editAdmin' title='Edit' style='cursor: pointer;'>
+                            <span class='glyphicon glyphicon-edit' aria-hidden='true' </span>
+                        </a>
+                        <br>
+                        <br>
+                        <a id='delete_$i' onclick='delID("AdminID_DB");' data-toggle='modal' data-target='#deletePopup' title='Remove' style='cursor: pointer;'>
+                            <span class='glyphicon glyphicon-remove' aria-hidden='true'></span>
+                        </a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <br>
+                    <span id='name_$i' class='crs_info'>Ahmed Kamel</span>
+                </td>
+                <td>
+                    <br>
+                    <span id='username_$i' class='crs_info'>A_ahmedkamel</span>
+                </td>
+                <td>
+                    <br>
+                    <span id='password_$i' class='crs_info'>123</span>
+                </td>
+                <td>
+                    <br>
+                    <span id='mail_$i' class='crs_info'>ahmedkamel22@gmail.com</span>
+                </td>
+                <td>
+                    <br>
+                    <span id='phone_$i' class='crs_info'>01002222222</span>
+                </td>
+                <td>
+                    <div class='row_options'>
+                        <a id='edit_$i' onclick='editID("AdminID_DB", "Ahmed Kamel", "A_ahmedkamel", "123", "ahmedkamel22@gmail.com", "01002222222", "rowNum");'
+                            data-toggle='modal' data-target='#editAdmin' title='Edit' style='cursor: pointer;'>
+                            <span class='glyphicon glyphicon-edit' aria-hidden='true' </span>
+                        </a>
+                        <br>
+                        <br>
+                        <a id='delete_$i' onclick='delID("AdminID_DB");' data-toggle='modal' data-target='#deletePopup' title='Remove' style='cursor: pointer;'>
+                            <span class='glyphicon glyphicon-remove' aria-hidden='true'></span>
+                        </a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <nav class=" nav navbar-bottom">
+    </nav>
+
+    <!--poopup-->
+    <div id="popup" uib-modal-window="modal-window" class=" popup modal fade ng-scope ng-isolate-scope in" role="dialog" size="sm"
+        index="0" animate="animate" ng-style="{'z-index': 1050 + $$topModalIndex*10, display: 'block'}" tabindex="-1" uib-modal-animation-class="fade"
+        modal-in-class="in" modal-animation="true" style="z-index: 1050; visibility:hidden;display: block;" onchange="document.body.style.opacity='1'"
+        ;>
+        <div class="mod-log modal-dialog modal-sm">
+            <div class="logout-modal modal-content" uib-modal-transclude="">
+                <div class="panel-heading">
+                    <div class="media">
+                        <div class="media-body">
+                            <h4 class="media-heading">Logout</h4>
+                            <h5 class="media-heading-down ">Are you sure ? </h5>
+                        </div>
+                        <div class="media-right">
+                            <span class=" glyphicon glyphicon-log-out" aria-hidden="true"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class=" modal-footer">
+                    <form action="index.html">
+                        <input type="button" onclick="getElementById('popup').style.visibility='hidden';" class=" btn btn-secondary" value="cancel">
+                        <input type="submit" class="btn btn-success ">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Edit ppopup-->
+    <div align="center" class="addCourses modal fade" id="editAdmin" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <form method="POST">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="exampleModalCenterTitle">
+                            <b> Admin information</b>
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                        <table>
+                            <tr>
+                                <td>
+                                    <br>
+                                    <div class="countainer">
+                                        <label> Admin name </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <br>
+                                    <div class="countainer">
+                                        <input id="popup_name" name="popup_name" type="text" class="c course form-control" value="    " required>
+                                    </div>
+                                </td>
+                                <tr>
+                                    <td>
+                                        <br>
+                                        <div class="countainer">
+                                            <label> Username </label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <br>
+                                        <div class="countainer">
+                                            <input id="popup_username" name="popup_username" type="text" class="c course form-control" required>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <br>
+                                        <div class="countainer">
+                                            <label> Password </label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <br>
+                                        <div class="countainer">
+                                            <input id="popup_password" name="popup_password" type="text" class="c course form-control" required>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <br>
+                                        <div class="countainer">
+                                            <label> E-mail </label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <br>
+                                        <div class="countainer">
+                                            <input id="popup_email" name="popup_email" type="email" class="c course form-control" required>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <br>
+                                        <div class="countainer">
+                                            <label> Telephone </label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <br>
+                                        <div class="countainer">
+                                            <input id="popup_tel" name="popup_tel" type="tel" class="c course form-control" required>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <input id="popup_hidden_ID" name="popup_hidden_ID" type="hidden" value="">
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-success" name="submit2">Save</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+    <!--delete popup-->
+    <div class="modal fade" id="deletePopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="del-mod modal-content">
+                <form method="POST">
+                    <div class="modal-body">
+                        Are You sure you want to remove this Admin ?
+                    </div>
+                    <input type="hidden" id="del_popup_hdn" name="del_popup_hdn">
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-success" name="submit3">Remove</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function editID(IDnum, name, user, pass, email, num) {
+        document.getElementById("popup_hidden_ID").value = IDnum;
+        document.getElementById("popup_name").value = name;
+        document.getElementById("popup_username").value = user;
+        document.getElementById("popup_password").value = pass;
+        document.getElementById("popup_email").value = email;
+        document.getElementById("popup_tel").value = num;
+    }
+    function delID(IDnum) {
+        document.getElementById("del_popup_hdn").value = IDnum;
+    }
+</script>
+
+</html>

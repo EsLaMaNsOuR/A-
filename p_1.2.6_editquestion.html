@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> A+ | Professor </title>
+    <!--course Title-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/P_1.2.6_editQuestion/css/rtl.css">
+    <link rel="stylesheet" href="css/P_1.2.6_editQuestion/css/style.css">
+    <script src="js/jquery.css"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+
+<body onload="document.body.style.opacity='1';">
+    <nav class="navbar navbar-fixed-top navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                    aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand">
+                    <img class="navbar-brand" src="img/logo-col-small.png">
+                </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="P_1_home.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="P_1.1_setExam.html">New exam</a>
+                    </li>
+                    <li class="active">
+                        <a href="P_1.2_course.html">Courses</a>
+                    </li>
+                    <li>
+                        <a href="P_1.3_courseDegrees.html">Enrolled students</a>
+                    </li>
+                    <li class="dropdown" style="margin-right: 10px;">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span id="userName">
+                                professor
+                            </span>
+                            <span id="position">
+                                Ahmed Kamel
+                            </span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a onclick="getElementById('popup').style.visibility='visible';">
+                                    Logout
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div align="center">
+        <div class="container">
+            <a href="P_1.2_course.html">
+                <label class="upperTitle">File Orgnization, Summer 2017/2018</label>
+            </a>
+            <br>
+            <a href="P_1.2.1_exams.html">
+                <label class="upperTitle">Midterm, 5 questions, 10 minutes, 10 points</label>
+            </a>
+        </div>
+        <table class="table">
+            <form action="P_1.2.2_exam.html" method="post">
+                <div class="top_control">
+                    <tr class="quesRow" scope="row">
+                        <td>
+                            <!--href MUST be UNIQIE EVERY ROW-- use here mcq_qX : X number of question>
+                                                                                        <!-- 1- ((href)) MUST be equal to ((id)) in comment number 3-->
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#mcq_q1" role="tab" aria-controls="home" aria-selected="true">
+                                <input type="button" class="save btn btn-success " aria-haspopup="false" aria-expanded="true" text-decoration=" none" value="Malti-choice">
+                            </a>
+                            <br>
+                            <!--href MUST be UNIQIE EVERY ROW-- use here tf_qX : X number of question>
+                                                                                        <!-- 2- ((href)) MUST be equal to ((id)) in comment number 4-->
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#tf_q1" role="tab" aria-controls="profile" aria-selected="false">
+                                <input type="button" class="save btn btn-success " aria-haspopup="false" aria-expanded="true" text-decoration=" none" value="True & false">
+                            </a>
+                        </td>
+                        <td>
+                            <label class="quesNumb"> Question 1 </label>
+                            <br>
+                            <TEXTAREA class="form-control" id="ques" name="Address" rows=5 cols=250 placeholder="Write a question here">What's the capital of Egypt ?  </TEXTAREA>
+                        </td>
+                        <td>
+                            <div class="tab-content">
+                                <!-- 3-  here is ((id)) must be equal to href in comment 1 -->
+                                <div class="tab-pane active" id="mcq_q1" role="tabpanel" aria-labelledby="home-tab">
+                                    <label for="ans_a">
+                                        a.
+                                    </label>
+                                    <input type="text" class="ans form-control" id="ans_a" name="ans_a" value="Giza">
+                                    <br>
+                                    <label for="ans_b">
+                                        b.
+                                    </label>
+                                    <input type="text" class="ans form-control" id="ans_b" name="ans_b" value="Assiut">
+                                    <br>
+                                    <label for="ans_c ">
+                                        c.
+                                    </label>
+                                    <input type="text" class="ans form-control " id="ans_c" name="ans_c" value="Cairo">
+                                    <br>
+                                    <label for="ans_d">
+                                        d.
+                                    </label>
+                                    <input type="text" class="ans form-control" id="ans_d" name="ans_d" value="Aswan">
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <div class="mcq btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="b btn btn-secondary">
+                                            <input type="radio" name="options" id="option1" autocomplete="off"> a
+                                        </label>
+                                        <label class="b btn btn-secondary">
+                                            <input type="radio" name="options" id="option2" autocomplete="off"> b
+                                        </label>
+                                        <label class="b btn btn-secondary active">
+                                            <input type="radio" name="options" id="option3" autocomplete="off"> c
+                                        </label>
+                                        <label class="b btn btn-secondary">
+                                            <input type="radio" name="options" id="option3" autocomplete="off"> d
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- 4-  here is ((id)) must be equal to href in comment 2 -->
+                                <div class="tab-pane" id="tf_q1" role="tabpanel" aria-labelledby="profile-tab">
+                                    <div class="t_f btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class=" b btn btn-secondary ">
+                                            <input type="radio" name="options" id="option1" autocomplete="off"> True
+                                        </label>
+                                        <label class="b btn btn-secondary">
+                                            <input type="radio" name="options" id="option2" autocomplete="off"> False
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr class="quesRow" scope="row">
+                        <td>
+                            <!--href MUST be UNIQIE EVERY ROW-- use here mcq_qX : X number of question>
+                                                                                        <!-- 1- ((href)) MUST be equal to ((id)) in comment number 3-->
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#mcq_q2" role="tab" aria-controls="home" aria-selected="true">
+                                <input type="button" class="save btn btn-success " aria-haspopup="true" aria-expanded="false" text-decoration=" none" value="Malti-choice">
+                            </a>
+                            <br>
+                            <!--href MUST be UNIQIE EVERY ROW-- use here tf_qX : X number of question>
+                                                                                        <!-- 2- ((href)) MUST be equal to ((id)) in comment number 4-->
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#tf_q2" role="tab" aria-controls="profile" aria-selected="false">
+                                <input type="button" class="save btn btn-success " aria-haspopup="true" aria-expanded="false" text-decoration=" none" value="True & false">
+                            </a>
+                        </td>
+                        <td>
+                            <label class="quesNumb"> Question 2 </label>
+                            <br>
+                            <TEXTAREA class="form-control" id="ques" name="Address" rows=5 cols=250 placeholder="Write a question here">Is the capital of Egypt is Giza ?  </TEXTAREA>
+                        </td>
+                        <td>
+                            <div class="tab-content">
+                                <!-- 3-  here is ((id)) must be equal to href in comment 1 -->
+                                <div class="tab-pane " id="mcq_q2" role="tabpanel" aria-labelledby="home-tab">
+                                    <label for="ans_a">
+                                        a.
+                                    </label>
+                                    <input type="text" class="ans form-control" id="ans_a" name="ans_a">
+                                    <br>
+                                    <label for="ans_b">
+                                        b.
+                                    </label>
+                                    <input type="text" class="ans form-control" id="ans_b" name="ans_b">
+                                    <br>
+                                    <label for="ans_c">
+                                        c.
+                                    </label>
+                                    <input type="text" class="ans form-control" id="ans_c" name="ans_c">
+                                    <br>
+                                    <label for="ans_d">
+                                        d.
+                                    </label>
+                                    <input type="text" class="ans form-control" id="ans_d" name="ans_d">
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <div class="mcq btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="b btn btn-secondary ">
+                                            <input type="radio" name="options" id="option1" autocomplete="off" checked> a
+                                        </label>
+                                        <label class="b btn btn-secondary">
+                                            <input type="radio" name="options" id="option2" autocomplete="off"> b
+                                        </label>
+                                        <label class="b btn btn-secondary">
+                                            <input type="radio" name="options" id="option3" autocomplete="off"> c
+                                        </label>
+                                        <label class="b btn btn-secondary">
+                                            <input type="radio" name="options" id="option3" autocomplete="off"> d
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- 4-  here is ((id)) must be equal to href in comment 2 -->
+                                <div class="tab-pane active" id="tf_q2" role="tabpanel" aria-labelledby="profile-tab">
+                                    <div class="t_f btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class=" b btn btn-secondary ">
+                                            <input type="radio" name="options" id="option1" autocomplete="off" checked> True
+                                        </label>
+                                        <label class="b btn btn-secondary active">
+                                            <input type="radio" name="options" id="option2" autocomplete="off"> False
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr class="quesRow" scope="row">
+                        <td>
+                            <!--href MUST be UNIQIE EVERY ROW-- use here mcq_qX : X number of question>
+                                                                                        <!-- 3- ((href)) MUST be equal to ((id)) in comment number 3-->
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#mcq_q3" role="tab" aria-controls="home" aria-selected="true">
+                                <input type="button" class="save btn btn-success " aria-haspopup="false" aria-expanded="true" text-decoration=" none" value="Malti-choice">
+                            </a>
+                            <br>
+                            <!--href MUST be UNIQIE EVERY ROW-- use here tf_qX : X number of question>
+                                                                                        <!-- 3- ((href)) MUST be equal to ((id)) in comment number 4-->
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#tf_q3" role="tab" aria-controls="profile" aria-selected="false">
+                                <input type="button" class="save btn btn-success " aria-haspopup="false" aria-expanded="true" text-decoration=" none" value="True & false">
+                            </a>
+                        </td>
+                        <td>
+                            <label class="quesNumb"> Question 3 </label>
+                            <br>
+                            <TEXTAREA class="form-control" id="ques" name="Address" rows=5 cols=250 placeholder="Write a question here">What's the capital of Egypt ? </TEXTAREA>
+                        </td>
+                        <td>
+                            <div class="tab-content">
+                                <!-- 3-  here is ((id)) must be equal to href in comment 3 -->
+                                <div class="tab-pane active" id="mcq_q3" role="tabpanel" aria-labelledby="home-tab">
+                                    <label for="ans_a">
+                                        a.
+                                    </label>
+                                    <input type="text" class="ans form-control" id="ans_a" name="ans_a" value="Giza">
+                                    <br>
+                                    <label for="ans_b">
+                                        b.
+                                    </label>
+                                    <input type="text" class="ans form-control" id="ans_b" name="ans_b" value="Assiut">
+                                    <br>
+                                    <label for="ans_c ">
+                                        c.
+                                    </label>
+                                    <input type="text" class="ans form-control " id="ans_c" name="ans_c" value="Cairo">
+                                    <br>
+                                    <label for="ans_d">
+                                        d.
+                                    </label>
+                                    <input type="text" class="ans form-control" id="ans_d" name="ans_d" value="Aswan">
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <div class="mcq btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="b btn btn-secondary">
+                                            <input type="radio" name="options" id="option1" autocomplete="off"> a
+                                        </label>
+                                        <label class="b btn btn-secondary">
+                                            <input type="radio" name="options" id="option2" autocomplete="off"> b
+                                        </label>
+                                        <label class="b btn btn-secondary active">
+                                            <input type="radio" name="options" id="option3" autocomplete="off"> c
+                                        </label>
+                                        <label class="b btn btn-secondary">
+                                            <input type="radio" name="options" id="option3" autocomplete="off"> d
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- 4-  here is ((id)) must be equal to href in comment 3 -->
+                                <div class="tab-pane" id="tf_q3" role="tabpanel" aria-labelledby="profile-tab">
+                                    <div class="t_f btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class=" b btn btn-secondary ">
+                                            <input type="radio" name="options" id="option3" autocomplete="off"> True
+                                        </label>
+                                        <label class="b btn btn-secondary">
+                                            <input type="radio" name="options" id="option3" autocomplete="off"> False
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr class="quesRow" scope="row">
+                        <td>
+                            <!--href MUST be UNIQIE EVERY ROW-- use here mcq_qX : X number of question>
+                                                                                        <!-- 4- ((href)) MUST be equal to ((id)) in comment number 3-->
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#mcq_q4" role="tab" aria-controls="home" aria-selected="true">
+                                <input type="button" class="save btn btn-success " aria-haspopup="false" aria-expanded="true" text-decoration=" none" value="Malti-choice">
+                            </a>
+                            <br>
+                            <!--href MUST be UNIQIE EVERY ROW-- use here tf_qX : X number of question>
+                                                                                        <!-- 4- ((href)) MUST be equal to ((id)) in comment number 4-->
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#tf_q4" role="tab" aria-controls="profile" aria-selected="false">
+                                <input type="button" class="save btn btn-success " aria-haspopup="false" aria-expanded="true" text-decoration=" none" value="True & false">
+                            </a>
+                        </td>
+                        <td>
+                            <label class="quesNumb"> Question 4 </label>
+                            <br>
+                            <TEXTAREA class="form-control" id="ques" name="Address" rows=5 cols=250 placeholder="Write a question here">Is the capital of Egypt is Giza ?  </TEXTAREA>
+                        </td>
+                        <td>
+                            <div class="tab-content">
+                                <!-- 3-  here is ((id)) must be equal to href in comment 4 -->
+                                <div class="tab-pane" id="mcq_q4" role="tabpanel" aria-labelledby="home-tab">
+                                    <label for="ans_a">
+                                        a.
+                                    </label>
+                                    <input type="text" class="ans form-control" id="ans_a" name="ans_a">
+                                    <br>
+                                    <label for="ans_b">
+                                        b.
+                                    </label>
+                                    <input type="text" class="ans form-control" id="ans_b" name="ans_b">
+                                    <br>
+                                    <label for="ans_c">
+                                        c.
+                                    </label>
+                                    <input type="text" class="ans form-control" id="ans_c" name="ans_c">
+                                    <br>
+                                    <label for="ans_d">
+                                        d.
+                                    </label>
+                                    <input type="text" class="ans form-control" id="ans_d" name="ans_d">
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <div class="mcq btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="b btn btn-secondary ">
+                                            <input type="radio" name="options" id="option4" autocomplete="off"> a
+                                        </label>
+                                        <label class="b btn btn-secondary">
+                                            <input type="radio" name="options" id="option4" autocomplete="off"> b
+                                        </label>
+                                        <label class="b btn btn-secondary">
+                                            <input type="radio" name="options" id="option3" autocomplete="off"> c
+                                        </label>
+                                        <label class="b btn btn-secondary">
+                                            <input type="radio" name="options" id="option3" autocomplete="off"> d
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- 4-  here is ((id)) must be equal to href in comment 4 -->
+                                <div class="tab-pane active" id="tf_q4" role="tabpanel" aria-labelledby="profile-tab">
+                                    <div class="t_f btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class=" b btn btn-secondary ">
+                                            <input type="radio" name="options" id="option4" autocomplete="off"> True
+                                        </label>
+                                        <label class="b btn btn-secondary active">
+                                            <input type="radio" name="options" id="option4" autocomplete="off"> False
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr class="quesRow" scope="row">
+                        <td>
+                            <!--href MUST be UNIQIE EVERY ROW-- use here mcq_qX : X number of question>
+                                                                                        <!-- 5- ((href)) MUST be equal to ((id)) in comment number 3-->
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#mcq_q5" role="tab" aria-controls="home" aria-selected="true">
+                                <input type="button" class="save btn btn-success " aria-haspopup="false" aria-expanded="true" text-decoration=" none" value="Malti-choice">
+                            </a>
+                            <br>
+                            <!--href MUST be UNIQIE EVERY ROW-- use here tf_qX : X number of question>
+                                                                                        <!-- 5- ((href)) MUST be equal to ((id)) in comment number 4-->
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#tf_q5" role="tab" aria-controls="profile" aria-selected="false">
+                                <input type="button" class="save btn btn-success " aria-haspopup="false" aria-expanded="true" text-decoration=" none" value="True & false">
+                            </a>
+                        </td>
+                        <td>
+                            <label class="quesNumb"> Question 5 </label>
+                            <br>
+                            <TEXTAREA class="form-control" id="ques" name="Address" rows=5 cols=250 placeholder="Write a question here">What's the capital of Egypt ? </TEXTAREA>
+                        </td>
+                        <td>
+                            <div class="tab-content">
+                                <!-- 3-  here is ((id)) must be equal to href in comment 5 -->
+                                <div class="tab-pane active" id="mcq_q5" role="tabpanel" aria-labelledby="home-tab">
+                                    <label for="ans_a">
+                                        a.
+                                    </label>
+                                    <input type="text" class="ans form-control" id="ans_a" name="ans_a" value="Giza">
+                                    <br>
+                                    <label for="ans_b">
+                                        b.
+                                    </label>
+                                    <input type="text" class="ans form-control" id="ans_b" name="ans_b" value="Assiut">
+                                    <br>
+                                    <label for="ans_c ">
+                                        c.
+                                    </label>
+                                    <input type="text" class="ans form-control " id="ans_c" name="ans_c" value="Cairo">
+                                    <br>
+                                    <label for="ans_d">
+                                        d.
+                                    </label>
+                                    <input type="text" class="ans form-control" id="ans_d" name="ans_d" value="Aswan">
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <div class="mcq btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="b btn btn-secondary">
+                                            <input type="radio" name="options" id="option1" autocomplete="off"> a
+                                        </label>
+                                        <label class="b btn btn-secondary">
+                                            <input type="radio" name="options" id="option2" autocomplete="off"> b
+                                        </label>
+                                        <label class="b btn btn-secondary active">
+                                            <input type="radio" name="options" id="option3" autocomplete="off"> c
+                                        </label>
+                                        <label class="b btn btn-secondary">
+                                            <input type="radio" name="options" id="option3" autocomplete="off"> d
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- 4-  here is ((id)) must be equal to href in comment 5 -->
+                                <div class="tab-pane" id="tf_q5" role="tabpanel" aria-labelledby="profile-tab">
+                                    <div class="t_f btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class=" b btn btn-secondary ">
+                                            <input type="radio" name="options" id="option5" autocomplete="off"> True
+                                        </label>
+                                        <label class="b btn btn-secondary">
+                                            <input type="radio" name="options" id="option5" autocomplete="off"> False
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <input type="submit" name="sr" class="save btn btn-success " aria-haspopup="true" aria-expanded="false" text-decoration=" none"
+                        value="Save">
+            </form>
+        </table>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <nav class=" nav navbar-bottom">
+        </nav>
+
+
+        <!--poopup-->
+        <div id="popup" uib-modal-window="modal-window" class=" popup modal fade ng-scope ng-isolate-scope in" role="dialog" size="sm"
+            index="0" animate="animate" ng-style="{'z-index': 1050 + $$topModalIndex*10, display: 'block'}" tabindex="-1" uib-modal-animation-class="fade"
+            modal-in-class="in" modal-animation="true" style="z-index: 1050; visibility:hidden;display: block;" onchange="document.body.style.opacity='1'"
+            ;>
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content" uib-modal-transclude="">
+                    <div class="panel-heading">
+                        <div class="media">
+                            <div class="media-body">
+                                <h4 class="media-heading">Logout</h4>
+                                <h5 class="media-heading-down ">Are you sure ? </h5>
+                            </div>
+                            <div class="media-right">
+                                <span class=" glyphicon glyphicon-log-out" aria-hidden="true"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" modal-footer">
+                        <form action="index.html">
+                            <input type="button" onclick="getElementById('popup').style.visibility='hidden';" class=" btn btn-secondary" value="cancel">
+                            <input type="submit" class=" btn btn-success ">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
